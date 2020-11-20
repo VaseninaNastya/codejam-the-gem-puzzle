@@ -1,0 +1,327 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* { box-sizing: border-box }
+a:hover, a:visited, a:link, a:active {text-decoration: none; color: black;}
+
+html{
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+ul, li{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #222222;
+    font-family: 'Arial', sans-serif;
+}
+a:hover{
+cursor: pointer;
+}
+li{
+    list-style: none;
+}
+.hidden{
+    visibility: hidden
+}
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 760px;
+    height: 100vh;
+    padding: 10px;
+    background:white;
+}
+body{
+    background: rgba(207, 201, 149, 0.15);
+}
+
+.title_secondary{
+    font-size: 0.4rem;
+    margin-right: 20px;
+}
+/*buttons*/
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button:active{
+    border:none
+}
+button:active, button:focus {
+    outline: none;
+}
+.button__prime{
+    background: rgb(155, 226, 73);
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,0.2),-0.05em -0.05em 0.1em rgba(255,255,255,0.3);
+    border-radius: 3px;
+    font-size: 0.4rem;
+}
+.button__prime:hover{
+    box-shadow: 5px 5px 2px 1px rgb(155, 226, 73,0.3);
+    border: none;
+    cursor: pointer;
+}
+.button__prime:active{
+    box-shadow: none;
+    background: #83c03d;
+}
+
+.button__prime__disabled{
+    background: #83c03d;
+    color: silver;
+    transition: all 1s ease-out;
+}
+.button__prime__disabled:hover{
+    background: #83c03d;
+    color: silver;
+    transition: all 1s ease-out;
+    cursor: inherit;
+    box-shadow: none;
+}
+
+.button_save{
+    width: 200px;
+    /*background: rgb(255, 181, 71);*/
+}
+/*aside*/
+aside{
+    width: 270px;
+}
+.aside_description{
+    color: #3b551a;
+    font-size: 0.4rem;
+}
+.aside_item{
+    display: flex;
+    color: #3b551a;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 0.4rem;
+}
+/*size*/
+.button_container, .difficult_container, .size_container{
+    display: flex;
+    justify-content: space-between;
+}
+.size_list{
+    height: 30px;
+    width: 60px;
+}
+.style_list{
+    height: 30px;
+    width: 80px;
+}
+.difficult_list{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 100px;
+}
+.gem-puzzle_container{
+    position: relative;
+}
+.message_container{
+    position: absolute;
+    height:  450px;
+    width:  450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,0.2),-0.05em -0.05em 0.1em rgba(255,255,255,0.3);
+    flex-wrap: wrap;
+    background-color: rgba(118, 173, 55, 0.7);
+    border-radius: 10px;
+}
+.message_container:hover{
+    background-color: rgba(118, 173, 55, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.winGame{
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(228, 205, 0, 0.9);
+    padding: 20px;
+    transition: all 0.3s ease-out;
+}
+.winGame_startNewGameMessage:hover{
+    text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.2),-0.05em -0.05em 0.1em rgba(255,255,255,0.3);
+    transition: all 0.5s ease-out;
+}
+.winGame:hover{
+    background-color: rgba(228, 205, 0, 0.95);
+}
+.gem-puzzle_prime-section{
+    display: grid;
+    flex-wrap: wrap;
+    height: 450px;
+    width:  450px
+}
+.gem-puzzle_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(226, 100%, 50%, 0.7);
+    border:5px solid  rgba(0, 60, 255, 0.4);
+    border-radius: 10px;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 0.05em 0.05em 0.1em rgba(0,0,0,0.2),-0.05em -0.05em 0.1em rgba(255,255,255,0.3);
+    color: white;
+}
+.gem-puzzle_item__selected{
+    visibility: hidden;
+}
+.gem-puzzle_item:hover{
+    background-color: hsla(226, 100%, 50%, 0.8);
+    border:5px solid  rgba(0, 60, 255, 0.5);
+   /* cursor: pointer;*/
+   /*cursor :grab*/
+}
+.gem-puzzle_item__empty{
+    background-color:inherit;
+    border:none
+}
+.gem-puzzle_item__empty:hover{
+    background-color: inherit;
+    border:none
+}
+
+body{
+    height: 100vh;
+}
+.empty__afterClick{
+    background-color: rebeccapurple;
+    height: 0px;
+    width: 0px;
+}
+
+/*для анимации, если не буду делать, удалить*/
+
+.left{
+    margin-left: 100px;
+}
+.right{
+    margin-left: -100px;
+}
+.top{
+    margin-top: 100px;
+}
+.bottom{
+    margin-top: -100px;
+}
+.winners{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.winnerslist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media (max-width: 768px) and (min-width: 500px) {
+    html{
+        font-size: 34px;
+    }
+    .wrap{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: auto;
+        width: 90vw;
+        height: calc(100vw + 480px);
+        padding: 0px;
+    }
+    .gem-puzzle_prime-section{
+        height: 90vw;
+        width: 90vw;
+    }
+    .message_container{
+       padding:  20px;
+        height:  90vw;
+        width: 90vw;
+    }
+    
+    aside{
+        margin-top: 20px;
+        order:1;
+        width: 350px;
+    }
+   .aside_item{
+    font-size: 0.5rem;
+    }
+    .title_secondary{
+        font-size: 0.5rem;
+        margin-right: 20px;
+    }
+    .button__prime{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 500px){
+
+    html{
+        font-size: 24px;
+    }
+    .wrap{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: auto;
+        width: 90vw;
+        height: calc(100vw + 440px);
+        padding: 0px;
+    }
+    .message_container{
+        padding:  20px;
+         height:  90vw;
+         width: 90vw;
+         font-size: 20px;
+     }
+    .gem-puzzle_prime-section{
+        height: 90vw;
+        width: 90vw;
+    }
+    aside{
+        margin-top: 20px;
+        order:1;
+        width: 80vw;
+    }
+
+    .title_secondary{
+        font-size: 0.6rem;
+        margin-right: 20px;
+    }
+    .aside_item{
+        font-size: 0.6rem;
+        }
+    .button__prime{
+        font-size: 0.6rem;
+    }
+
+}
